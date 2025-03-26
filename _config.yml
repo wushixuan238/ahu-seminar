@@ -10,6 +10,15 @@ plugins:
   - jekyll-feed
   - jekyll-seo-tag
 
+# 集合设置
+collections:
+  meetings:
+    output: true
+    permalink: /meetings/:path/
+  members:
+    output: true
+    permalink: /members/:path/
+
 # 排除文件
 exclude:
   - Gemfile

@@ -1,0 +1,44 @@
+---
+layout: default
+---
+
+<div class="container mt-4">
+  <div class="row">
+    <div class="col-md-10 offset-md-1">
+      <div class="card mb-4">
+        <div class="card-header {% if page.semester == '2025-spring' %}bg-primary{% else %}bg-success{% endif %} text-white">
+          <h4 class="mb-0">{{ page.date | date: "%Y年%m月%d日" }}</h4>
+        </div>
+        <div class="card-body">
+          <div class="row">
+            <div class="col-md-4">
+              <div class="text-center mb-3">
+                <img src="{{ page.avatar }}" alt="{{ page.speaker }}" class="rounded-circle" style="width: 100px; height: 100px;">
+                <h5 class="mt-2">{{ page.speaker }}</h5>
+              </div>
+            </div>
+            <div class="col-md-8">
+              <h4>{{ page.title }}</h4>
+              <p><strong>发表会议</strong>: {{ page.conference }}</p>
+              <p><strong>资料</strong>: 
+                {% if page.paper_link %}
+                <a href="{{ page.paper_link }}" class="btn btn-sm btn-outline-primary"><i class="fas fa-file-pdf"></i> 论文</a>
+                {% endif %}
+                {% if page.slides_link %}
+                <a href="{{ page.slides_link }}" class="btn btn-sm btn-outline-info"><i class="fas fa-file-powerpoint"></i> 幻灯片</a>
+                {% endif %}
+                {% if page.notes_link %}
+                <a href="{{ page.notes_link }}" class="btn btn-sm btn-outline-secondary"><i class="fas fa-sticky-note"></i> 笔记</a>
+                {% endif %}
+              </p>
+              <div class="abstract mt-3">
+                <h5>摘要</h5>
+                <p>{{ content }}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
