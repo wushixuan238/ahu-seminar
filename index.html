@@ -15,14 +15,13 @@ title: 学术研讨班资料库
         <div class="col-md-12">
             <h2>最新报告</h2>
             <ul class="post-list">
-                {% for post in site.posts limit:5 %}
+                {% for post in site.posts limit:4 %}
                 <li>
                     <h3>
-                        <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+                        <a class="post-link" href="{{ post.paper_url }}">{{ post.title }}</a>
                     </h3>
                     <span class="post-meta">{{ post.date | date: "%Y-%m-%d" }} | 报告人：{{ post.author }}</span>
                     <p>{{ post.excerpt }}</p>
-                    <a href="{{ post.url | prepend: site.baseurl }}" class="btn btn-primary">查看详情</a>
                 </li>
                 {% endfor %}
             </ul>
