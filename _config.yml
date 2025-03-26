@@ -1,7 +1,7 @@
 title: 学术研讨班资料库
 description: 收集和展示学术研讨班的周报、演示文稿和摘要
-baseurl: "" # 如果您的网站部署在子目录，请在此处设置
-url: "" # 您的网站URL
+baseurl: "/ahu-seminar" # 根据您的GitHub仓库名称设置
+url: "https://wushixuan238.github.io" # 您的GitHub Pages URL
 
 # 构建设置
 markdown: kramdown
