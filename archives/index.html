@@ -15,16 +15,18 @@ title: 报告归档
         {% assign postsByYear = site.posts | group_by_exp:"post", "post.date | date: '%Y'" %}
         {% for year in postsByYear %}
           <h2 class="archive-year">{{ year.name }} 年</h2>
-          <ul class="list-unstyled">
-            {% for post in year.items %}
-              <li class="archive-item">
-                <span class="post-date">{{ post.date | date: "%Y-%m-%d" }}</span>
-                <a href="{{ post.paper_url }}" class="post-link">{{ post.title }}</a>
-                {% if post.author %}<span class="post-author"> - {{ post.author }}</span>{% endif %}
-                {% if post.category %}<span class="post-category badge badge-secondary">{{ post.category }}</span>{% endif %}
-              </li>
-            {% endfor %}
-          </ul>
+          {% assign posts_by_date = year.items | group_by_exp:"post", "post.date | date: '%Y-%m-%d'" %}
+          {% for date_group in posts_by_date %}
+            <h4 class="date-divider mt-4 mb-3">{{ date_group.name }}</h4>
+            <ul class="list-unstyled">
+              {% for post in date_group.items %}
+                <li class="archive-item">
+                  <a href="{{ post.paper_url }}" class="post-link">{{ post.title }}</a>
+                  {% if post.author %}<span class="post-author"> - {{ post.author }}</span>{% endif %}
+                </li>
+              {% endfor %}
+            </ul>
+          {% endfor %}
         {% endfor %}
       </div>
       
