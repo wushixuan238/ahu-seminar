@@ -1,0 +1,37 @@
+---
+layout: default
+---
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <h1>{{ page.date | date: "%Y-%m-%d" }} 研讨会报告</h1>
+      <p class="post-meta">日期: {{ page.date | date: "%Y-%m-%d" }}</p>
+      
+      {% if page.reports %}
+      <hr>
+      {% for report in page.reports %}
+      <article class="post">
+        <header class="post-header">
+          <h2>
+            <a class="post-link" href="{{ report.paper_url }}">{{ report.title }}</a>
+          </h2>
+          <p class="post-meta">报告人：{{ report.author }} | 分类：{{ report.category }}</p>
+        </header>
+        
+        <div class="post-content">
+          <p>{{ report.excerpt }}</p>
+          
+          {% if report.slides_url %}
+          <p><a href="{{ report.slides_url }}" class="btn btn-primary">查看幻灯片</a></p>
+          {% endif %}
+        </div>
+      </article>
+      <hr>
+      {% endfor %}
+      {% endif %}
+      
+      <a href="{{ site.baseurl }}/archives/" class="btn btn-default">&laquo; 返回所有报告</a>
+    </div>
+  </div>
+</div>
