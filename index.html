@@ -10,6 +10,17 @@ title: 学术研讨班资料库
     </div>
 </div>
 
+<style>
+    .post-link {
+        color: #3498db; /* 水蓝色 */
+        transition: color 0.3s ease;
+    }
+    .post-link:hover {
+        color: #2980b9; /* 鼠标悬停时的深蓝色 */
+        text-decoration: none;
+    }
+</style>
+
 <div class="container">
     <div class="row">
         <div class="col-md-12">
@@ -21,11 +32,10 @@ title: 学术研讨班资料库
                         <a class="post-link" href="{{ post.paper_url }}">{{ post.title }}</a>
                     </h3>
                     <span class="post-meta">{{ post.date | date: "%Y-%m-%d" }} | 报告人：{{ post.author }}</span>
-                    <p>{{ post.excerpt }}</p>
                 </li>
                 {% endfor %}
             </ul>
-            <p><a href="/ahu-seminar/archives/" class="btn btn-default">查看所有报告</a></p>
+            <p><a href="{{ site.baseurl }}/archives/" class="btn btn-default">查看所有报告</a></p>
         </div>
     </div>
 
