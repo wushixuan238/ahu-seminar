@@ -4,6 +4,8 @@
 
 {% assign spring_2025_meetings = "" | split: "," %}
 
+
+<!--2025-03-26会议-->
 {% comment %} 2025-03-26会议 {% endcomment %}
 {% assign meeting_20250326 = "" | split: "," %}
 
@@ -28,57 +30,55 @@
 {% assign presentation3 = presentation3 | push: "https://ieeexplore.ieee.org/document/10902139" %}
 {% assign meeting_20250326 = meeting_20250326 | push: presentation3 %}
 
-{% assign presentation4 = "" | split: "," %}
-{% assign presentation4 = presentation4 | push: "联邦学习在医疗健康领域的应用" %}
-{% assign presentation4 = presentation4 | push: "赵六" %}
-{% assign presentation4 = presentation4 | push: "KDD 2024" %}
-{% assign presentation4 = presentation4 | push: "/ahu-seminar/files/papers/federated-learning-healthcare-2024.pdf" %}
-{% assign meeting_20250326 = meeting_20250326 | push: presentation4 %}
-
 {% assign spring_meeting1 = "" | split: "," %}
 {% assign spring_meeting1 = spring_meeting1 | push: "2025-03-26" %}
 {% assign spring_meeting1 = spring_meeting1 | push: "2025年03月26日" %}
 {% assign spring_meeting1 = spring_meeting1 | push: meeting_20250326 %}
 {% assign spring_2025_meetings = spring_2025_meetings | push: spring_meeting1 %}
 
-{% comment %} 2025-03-13会议 {% endcomment %}
-{% assign meeting_20250313 = "" | split: "," %}
 
-{% assign presentation1 = "" | split: "," %}
-{% assign presentation1 = presentation1 | push: "自然语言处理中的大型语言模型：挑战与机遇" %}
-{% assign presentation1 = presentation1 | push: "李四" %}
-{% assign presentation1 = presentation1 | push: "ACL 2024" %}
-{% assign presentation1 = presentation1 | push: "/ahu-seminar/files/papers/large-language-models-2025.pdf" %}
-{% assign meeting_20250313 = meeting_20250313 | push: presentation1 %}
+<!--2025-03-13会议-->
 
-{% assign presentation2 = "" | split: "," %}
-{% assign presentation2 = presentation2 | push: "跨模态检索技术进展" %}
-{% assign presentation2 = presentation2 | push: "钱八" %}
-{% assign presentation2 = presentation2 | push: "CVPR 2024" %}
-{% assign presentation2 = presentation2 | push: "/ahu-seminar/files/papers/cross-modal-retrieval-2024.pdf" %}
-{% assign meeting_20250313 = meeting_20250313 | push: presentation2 %}
+<!--{% comment %} 2025-03-13会议 {% endcomment %}-->
+<!--{% assign meeting_20250313 = "" | split: "," %}-->
 
-{% assign presentation3 = "" | split: "," %}
-{% assign presentation3 = presentation3 | push: "机器学习系统中的公平性考量" %}
-{% assign presentation3 = presentation3 | push: "孙七" %}
-{% assign presentation3 = presentation3 | push: "ICML 2024" %}
-{% assign presentation3 = presentation3 | push: "/ahu-seminar/files/papers/fairness-ml-2024.pdf" %}
-{% assign meeting_20250313 = meeting_20250313 | push: presentation3 %}
+<!--{% assign presentation1 = "" | split: "," %}-->
+<!--{% assign presentation1 = presentation1 | push: "自然语言处理中的大型语言模型：挑战与机遇" %}-->
+<!--{% assign presentation1 = presentation1 | push: "李四" %}-->
+<!--{% assign presentation1 = presentation1 | push: "ACL 2024" %}-->
+<!--{% assign presentation1 = presentation1 | push: "/ahu-seminar/files/papers/large-language-models-2025.pdf" %}-->
+<!--{% assign meeting_20250313 = meeting_20250313 | push: presentation1 %}-->
 
-{% assign presentation4 = "" | split: "," %}
-{% assign presentation4 = presentation4 | push: "计算机视觉中的少样本学习方法" %}
-{% assign presentation4 = presentation4 | push: "周九" %}
-{% assign presentation4 = presentation4 | push: "ECCV 2024" %}
-{% assign presentation4 = presentation4 | push: "/ahu-seminar/files/papers/few-shot-learning-2024.pdf" %}
-{% assign meeting_20250313 = meeting_20250313 | push: presentation4 %}
+<!--{% assign presentation2 = "" | split: "," %}-->
+<!--{% assign presentation2 = presentation2 | push: "跨模态检索技术进展" %}-->
+<!--{% assign presentation2 = presentation2 | push: "钱八" %}-->
+<!--{% assign presentation2 = presentation2 | push: "CVPR 2024" %}-->
+<!--{% assign presentation2 = presentation2 | push: "/ahu-seminar/files/papers/cross-modal-retrieval-2024.pdf" %}-->
+<!--{% assign meeting_20250313 = meeting_20250313 | push: presentation2 %}-->
 
-{% assign spring_meeting2 = "" | split: "," %}
-{% assign spring_meeting2 = spring_meeting2 | push: "2025-03-13" %}
-{% assign spring_meeting2 = spring_meeting2 | push: "2025年03月13日" %}
-{% assign spring_meeting2 = spring_meeting2 | push: meeting_20250313 %}
-{% assign spring_2025_meetings = spring_2025_meetings | push: spring_meeting2 %}
+<!--{% assign presentation3 = "" | split: "," %}-->
+<!--{% assign presentation3 = presentation3 | push: "机器学习系统中的公平性考量" %}-->
+<!--{% assign presentation3 = presentation3 | push: "孙七" %}-->
+<!--{% assign presentation3 = presentation3 | push: "ICML 2024" %}-->
+<!--{% assign presentation3 = presentation3 | push: "/ahu-seminar/files/papers/fairness-ml-2024.pdf" %}-->
+<!--{% assign meeting_20250313 = meeting_20250313 | push: presentation3 %}-->
 
-{% assign fall_2024_meetings = "" | split: "," %}
+<!--{% assign presentation4 = "" | split: "," %}-->
+<!--{% assign presentation4 = presentation4 | push: "计算机视觉中的少样本学习方法" %}-->
+<!--{% assign presentation4 = presentation4 | push: "周九" %}-->
+<!--{% assign presentation4 = presentation4 | push: "ECCV 2024" %}-->
+<!--{% assign presentation4 = presentation4 | push: "/ahu-seminar/files/papers/few-shot-learning-2024.pdf" %}-->
+<!--{% assign meeting_20250313 = meeting_20250313 | push: presentation4 %}-->
+
+<!--{% assign spring_meeting2 = "" | split: "," %}-->
+<!--{% assign spring_meeting2 = spring_meeting2 | push: "2025-03-13" %}-->
+<!--{% assign spring_meeting2 = spring_meeting2 | push: "2025年03月13日" %}-->
+<!--{% assign spring_meeting2 = spring_meeting2 | push: meeting_20250313 %}-->
+<!--{% assign spring_2025_meetings = spring_2025_meetings | push: spring_meeting2 %}-->
+
+<!--{% assign fall_2024_meetings = "" | split: "," %}-->
+
+<!--2024-12-19会议-->
 
 {% comment %} 2024-12-19会议 {% endcomment %}
 {% assign meeting_20241219 = "" | split: "," %}
