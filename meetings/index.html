@@ -41,7 +41,8 @@ title: 小组会
           <h2>2025年春季学期</h2>
           <div class="meeting-list">
             {% assign spring_meetings = site.data.meetings | where_exp: "meeting", "meeting[1].semester == 'spring'" %}
-            {% for meeting_entry in spring_meetings %}
+            {% assign sorted_spring_meetings = spring_meetings | sort: "[1].date" | reverse %}
+            {% for meeting_entry in sorted_spring_meetings %}
               {% assign meeting_id = meeting_entry[0] %}
               {% assign meeting = meeting_entry[1] %}
               {% include meeting-card.html 
@@ -57,7 +58,8 @@ title: 小组会
           <h2>2024年秋季学期</h2>
           <div class="meeting-list">
             {% assign fall_meetings = site.data.meetings | where_exp: "meeting", "meeting[1].semester == 'fall'" %}
-            {% for meeting_entry in fall_meetings %}
+            {% assign sorted_fall_meetings = fall_meetings | sort: "[1].date" | reverse %}
+            {% for meeting_entry in sorted_fall_meetings %}
               {% assign meeting_id = meeting_entry[0] %}
               {% assign meeting = meeting_entry[1] %}
               {% include meeting-card.html 
