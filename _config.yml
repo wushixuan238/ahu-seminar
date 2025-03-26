@@ -3,6 +3,11 @@ description: 收集和展示学术研讨班的周报、演示文稿和摘要
 baseurl: "/ahu-seminar" # 根据您的GitHub仓库名称设置
 url: "https://wushixuan238.github.io" # 您的GitHub Pages URL
 
+# 启用递归处理_posts子目录
+include:
+  - _posts/**/*.md
+  - _posts/**/*.markdown
+
 # 构建设置
 markdown: kramdown
 permalink: pretty

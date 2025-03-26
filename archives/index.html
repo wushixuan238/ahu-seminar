@@ -28,26 +28,7 @@ title: 报告归档
         {% endfor %}
       </div>
       
-      <div class="category-section mt-5">
-        <h2>按类别浏览</h2>
-        {% assign categories = site.posts | map: "category" | compact | uniq | sort %}
-        <div class="row">
-          {% for category in categories %}
-            <div class="col-md-4 mb-3">
-              <div class="card">
-                <div class="card-body">
-                  <h5 class="card-title">{{ category }}</h5>
-                  <p class="card-text">
-                    {% assign cat_posts = site.posts | where: "category", category %}
-                    共 {{ cat_posts.size }} 篇报告
-                  </p>
-                  <a href="{{ site.baseurl }}/category/{{ category | strip | slugify }}/" class="btn btn-outline-primary">查看详情</a>
-                </div>
-              </div>
-            </div>
-          {% endfor %}
-        </div>
-      </div>
+
       
     </div>
   </div>
