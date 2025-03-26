@@ -35,8 +35,20 @@ title: 小组会
         </div>
         
         <!-- 使用Jekyll集合动态生成会议列表 -->
-        {% assign spring_meetings = site.meetings | where: "semester", "spring" | sort: "date" | reverse %}
-        {% assign fall_meetings = site.meetings | where: "semester", "fall" | sort: "date" | reverse %}
+        {% if site.meetings %}
+          {% assign spring_meetings = site.meetings | where: "semester", "spring" %}
+          {% if spring_meetings.size > 0 %}
+            {% assign spring_meetings = spring_meetings | sort: "date" | reverse %}
+          {% endif %}
+          
+          {% assign fall_meetings = site.meetings | where: "semester", "fall" %}
+          {% if fall_meetings.size > 0 %}
+            {% assign fall_meetings = fall_meetings | sort: "date" | reverse %}
+          {% endif %}
+        {% else %}
+          {% assign spring_meetings = "" %}
+          {% assign fall_meetings = "" %}
+        {% endif %}
         
         <!-- 显示春季学期会议 -->
         {% if spring_meetings.size > 0 %}
