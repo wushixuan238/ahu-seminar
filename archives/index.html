@@ -41,7 +41,7 @@ title: 报告归档
                     {% assign cat_posts = site.posts | where: "category", category %}
                     共 {{ cat_posts.size }} 篇报告
                   </p>
-                  <a href="{{ site.baseurl }}/category/{{ category | slugify }}/" class="btn btn-outline-primary">查看详情</a>
+                  <a href="{{ site.baseurl }}/category/{% if category == 'Domain Generalization' %}domain-generalization{% elsif category == 'SAM' %}sam{% elsif category == 'Video Object Tracking' %}video-object-tracking{% else %}{{ category }}{% endif %}/" class="btn btn-outline-primary">查看详情</a>
                 </div>
               </div>
             </div>
