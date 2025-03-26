@@ -34,21 +34,35 @@ title: 小组会
           </div>
         </div>
         
-        <!-- 使用数据文件显示会议内容 -->
+        <!-- 包含会议数据文件 -->
+        {% include meeting-data.html %}
         
         <!-- 2025年春季学期会议 -->
         <div class="meeting-semester mb-5">
           <h2>2025年春季学期</h2>
           <div class="meeting-list">
-            {% assign spring_meetings = site.data.meetings | where_exp: "meeting", "meeting[1].semester == 'spring'" %}
-            {% assign sorted_spring_meetings = spring_meetings | sort: "[1].date" | reverse %}
-            {% for meeting_entry in sorted_spring_meetings %}
-              {% assign meeting_id = meeting_entry[0] %}
-              {% assign meeting = meeting_entry[1] %}
-              {% include meeting-card.html 
-                formatted_date=meeting.formatted_date 
-                presentations=meeting.presentations 
-              %}
+            {% for meeting in spring_2025_meetings %}
+              <div class="card mb-4">
+                <div class="card-header" style="background-color: #e3f2fd; color: #333;">
+                  <h4 class="mb-0">{{ meeting[1] }}</h4>
+                </div>
+                <div class="card-body">
+                  {% for presentation in meeting[2] %}
+                    <div class="presentation mb-4 {% unless forloop.last %}border-bottom pb-4{% endunless %}">
+                      <div class="row">
+                        <div class="col-md-12">
+                          <h4>{{ presentation[0] }}</h4>
+                          <p>
+                            <strong>报告人</strong>: {{ presentation[1] }} &nbsp;&nbsp;|&nbsp;&nbsp; 
+                            <strong>发表会议</strong>: {{ presentation[2] }} &nbsp;&nbsp;&nbsp;&nbsp;
+                            <a href="{{ presentation[3] }}" class="btn btn-sm btn-outline-primary"><i class="fas fa-file-pdf"></i> 论文</a>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  {% endfor %}
+                </div>
+              </div>
             {% endfor %}
           </div>
         </div>
@@ -57,16 +71,28 @@ title: 小组会
         <div class="meeting-semester mb-5">
           <h2>2024年秋季学期</h2>
           <div class="meeting-list">
-            {% assign fall_meetings = site.data.meetings | where_exp: "meeting", "meeting[1].semester == 'fall'" %}
-            {% assign sorted_fall_meetings = fall_meetings | sort: "[1].date" | reverse %}
-            {% for meeting_entry in sorted_fall_meetings %}
-              {% assign meeting_id = meeting_entry[0] %}
-              {% assign meeting = meeting_entry[1] %}
-              {% include meeting-card.html 
-                formatted_date=meeting.formatted_date 
-                presentations=meeting.presentations 
-                fall=true
-              %}
+            {% for meeting in fall_2024_meetings %}
+              <div class="card mb-4">
+                <div class="card-header" style="background-color: #e8f5e9; color: #333;">
+                  <h4 class="mb-0">{{ meeting[1] }}</h4>
+                </div>
+                <div class="card-body">
+                  {% for presentation in meeting[2] %}
+                    <div class="presentation mb-4 {% unless forloop.last %}border-bottom pb-4{% endunless %}">
+                      <div class="row">
+                        <div class="col-md-12">
+                          <h4>{{ presentation[0] }}</h4>
+                          <p>
+                            <strong>报告人</strong>: {{ presentation[1] }} &nbsp;&nbsp;|&nbsp;&nbsp; 
+                            <strong>发表会议</strong>: {{ presentation[2] }} &nbsp;&nbsp;&nbsp;&nbsp;
+                            <a href="{{ presentation[3] }}" class="btn btn-sm btn-outline-primary"><i class="fas fa-file-pdf"></i> 论文</a>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  {% endfor %}
+                </div>
+              </div>
             {% endfor %}
           </div>
         </div>
