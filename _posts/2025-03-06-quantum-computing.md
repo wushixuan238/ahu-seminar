@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "量子计算研究进展与挑战"
+title: "Every SAM Drop Counts ：Embracing Semantic Priors for Multi-Modality Image Fusion and Beyond"
 date: 2025-03-06
-author: "王五"
-category: "量子计算"
-excerpt: "本次报告介绍了量子计算领域的最新研究进展，包括量子算法、量子硬件技术和未来应用前景。"
+author: "倪赢杰"
+category: "SAM"
+excerpt: "本次报告介绍了Every SAM Drop Counts ：Embracing Semantic Priors for Multi-Modality Image Fusion and Beyond"
 paper_url: "/files/papers/quantum-computing-advances-2025.pdf"
 slides_url: "/files/slides/quantum-computing-presentation.pdf"
 ---

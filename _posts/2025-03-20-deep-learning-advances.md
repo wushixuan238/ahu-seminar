@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "深度学习最新进展及其在计算机视觉中的应用"
+title: "Single-Model and Any-Modality for Video Object Tracking"
 date: 2025-03-20
-author: "张三"
-category: "深度学习"
-excerpt: "本次研讨会报告总结了深度学习领域的最新进展，特别关注了在计算机视觉任务中的应用，包括目标检测、图像分割和生成式模型等方面的突破。"
+author: "王鑫睿"
+category: "Video Object Tracking"
+excerpt: "本次研讨会报告总结了深度学习领域的最新进展，Single-Model and Any-Modality for Video Object Tracking"
 paper_url: "/files/papers/deep-learning-advances-2025.pdf"
 slides_url: "/files/slides/deep-learning-advances-slides.pdf"
 ---

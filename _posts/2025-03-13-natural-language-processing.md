@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "自然语言处理中的大型语言模型：挑战与机遇"
+title: "Gradient-Guided Annealing for Domain Generalization"
 date: 2025-03-13
-author: "李四"
-category: "自然语言处理"
-excerpt: "本次报告探讨了大型语言模型（LLM）在自然语言处理领域的最新发展，分析了当前面临的挑战和未来的研究方向。"
+author: "陈聪"
+category: "Domain Generalization"
+excerpt: "本次报告探讨了Domain Generalization，分析了当前面临的挑战和未来的研究方向。"
 paper_url: "/files/papers/large-language-models-2025.pdf"
 slides_url: "/files/slides/llm-challenges-opportunities.pdf"
 ---
