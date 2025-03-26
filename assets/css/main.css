@@ -9,7 +9,7 @@ body {
 
 /* 首页大横幅 */
 .jumbotron {
-  background-color: #3498db;
+  background-color: #0F4C81;
   color: white;
   padding: 4rem 2rem;
   margin-bottom: 2rem;
@@ -44,7 +44,7 @@ body {
 }
 
 .post-link:hover {
-  color: #3498db;
+  color: #0F4C81;
   text-decoration: none;
 }
 
@@ -70,7 +70,7 @@ body {
   font-size: 1.4rem;
   margin-bottom: 1rem;
   padding-bottom: 0.5rem;
-  border-bottom: 2px solid #3498db;
+  border-bottom: 2px solid #0F4C81;
 }
 
 .category-posts {
@@ -96,7 +96,7 @@ body {
 }
 
 .category-posts a:hover {
-  color: #3498db;
+  color: #0F4C81;
 }
 
 .category-count {
@@ -111,7 +111,7 @@ body {
   margin-top: 2.5rem;
   margin-bottom: 1.5rem;
   padding-bottom: 0.5rem;
-  border-bottom: 2px solid #3498db;
+  border-bottom: 2px solid #0F4C81;
 }
 
 .archive-item {
@@ -125,7 +125,7 @@ body {
 }
 
 .post-category {
-  background-color: #3498db;
+  background-color: #0F4C81;
   margin-left: 0.5rem;
   font-weight: normal;
 }
